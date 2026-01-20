@@ -404,7 +404,7 @@
         const loader = new THREE.TextureLoader();
         // 这里替换为你本地图片的路径，例如 'images/sea.jpg'
         // 如果图片在同级目录，直接写 'sea.jpg'
-        loader.load('./bg2.JPG', function(texture) {
+        loader.load('./bg3.png', function(texture) {
             texture.colorSpace = THREE.SRGBColorSpace;
             
             // 1. 创建一个巨大的球体，把图片贴在球体内部 (BackSide)
@@ -452,9 +452,9 @@
         
         // 2. 增强 Bloom 效果，制造发光线
         const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.5, 0.4, 0.85);
-        bloomPass.strength = 1.8;  // 增强辉光
-        bloomPass.radius = 0.8;
-        bloomPass.threshold = 0.1;
+        bloomPass.strength = 1.2;  // 增强辉光
+        bloomPass.radius = 0.5;
+        bloomPass.threshold = 0.2;
         composer.addPass(bloomPass);
 
         // --- Lights (Deep Sea Atmosphere) ---
@@ -463,12 +463,12 @@
         scene.add(ambientLight);
 
         // 顶部直射光（模拟阳光穿透海面）
-        const sunLight = new THREE.DirectionalLight(0xffffff, 2);
+        const sunLight = new THREE.DirectionalLight(0xffffff, 0.5);
         sunLight.position.set(0, 50, 0);
         scene.add(sunLight);
 
         // 内部发光（点光源）- 让气泡核心发亮
-        const innerLight = new THREE.PointLight(0x00f3ff, 5, 50);
+        const innerLight = new THREE.PointLight(0x00f3ff, 3, 50);
         innerLight.position.set(0, 0, 0);
         scene.add(innerLight);
 
@@ -486,7 +486,8 @@
             // 2. 金属感设为 0，水是非金属
             metalness: 0,
             // 3. 极度光滑，像抛光玻璃/水面
-            roughness: 0,        
+            roughness: 0.05,
+            specularIntensity: 0,        
             // 4. 透射率提高到 0.95 (让背后的东西能透过来，只留一点点介质感)
             transmission: 0.95,      
             // 5. 降低厚度感，让它看起来更轻盈
@@ -496,7 +497,7 @@
             side: THREE.FrontSide, // 改为 FrontSide 减少渲染错误，或者 DoubleSide
             // 6. 清漆层，模拟水表面的那层反光
             clearcoat: 1.0,         
-            clearcoatRoughness: 0,
+            clearcoatRoughness: 0.1,
             // 7. 水的物理折射率
             ior: 1.33,
             // 8. [可选] 添加一点发光，让边缘有一圈淡淡的幽光
