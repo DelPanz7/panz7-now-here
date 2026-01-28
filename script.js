@@ -48,13 +48,13 @@ const hierarchy = {
             id: 'l1-2', label: 'Me as\nHCI Researcher', type: 'level-1', lat: 0, lon: 0,
             children: [
                 {
-                    id: 'l2-1', label: 'Human-Environment', type: 'level-2', lat: -10, lon: -25,
+                    id: 'l2-1', label: 'Human-🤖-Environment Interaction', type: 'level-2', lat: -10, lon: -25,
                 },
                 {
-                    id: 'l2-2', label: 'Human-Human', type: 'level-2', lat: -20, lon: 0,
+                    id: 'l2-2', label: 'Human-🤖-Human Interaction', type: 'level-2', lat: -20, lon: 0,
                 },
                 {
-                    id: 'l2-3', label: 'Human-Self', type: 'level-2', lat: -10, lon: 25,
+                    id: 'l2-3', label: 'Human-🤖-Self Interaction', type: 'level-2', lat: -10, lon: 25,
                 }
             ]
         },
