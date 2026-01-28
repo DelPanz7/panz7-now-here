@@ -26,7 +26,7 @@ const hierarchy = {
             id: 'l1-1', label: 'Me', type: 'level-1', lat: 20, lon: -60, children: []
         },
         {
-            id: 'l1-2', label: 'Me as\nHCI Researcher', type: 'level-1', lat: 20, lon: 0,
+            id: 'l1-2', label: 'Me as\nHCI Researcher', type: 'level-1', lat: 5, lon: 0,
             children: [
                 {
                     id: 'l2-1', label: 'Human-Environment', type: 'level-2', lat: -10, lon: -25,
