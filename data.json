@@ -5,7 +5,7 @@
       "title": "Affordance-based Interaction with Everyday Objects",
       "layoutType": "academic",
       "shortIntro": "Exploring new interaction opportunities with everyday objects through understanding and leveraging their affordances.",
-      "thumb": "./images/plant_sq.jpg",
+      "thumb": "./images/aff.jpeg",
       "details": {
         "fullDesc": "blablablablafull desc...",
         "outcomes": [
@@ -37,7 +37,7 @@
       "title": "Human Collaborations in Online communities",
       "layoutType": "academic",
       "shortIntro": "Exploring how humans interact and collaborate via AI/technology-aided communication in online communities.",
-      "thumb": "./images/plant_sq.jpg",
+      "thumb": "./images/soccomp.jpeg",
       "details": {
         "fullDesc": "blablablablafull desc...",
         "outcomes": [
@@ -94,7 +94,7 @@
       "title": "Robots/Agents AND Human Collaborations",
       "layoutType": "academic",
       "shortIntro": "Exploring how robots or intelligent agents can collaborate with humans in common human-human interaction scenarios.",
-      "thumb": "./images/plant_sq.jpg",
+      "thumb": "./images/hrt.jpeg",
       "details": {
         "fullDesc": "blablablablafull desc...",
         "outcomes": [
@@ -124,7 +124,7 @@
       "title": "Robots FOR Human Collaborations",
       "layoutType": "academic",
       "shortIntro": "Exploring how robots or intelligent agents can facilitate and enhance human-human interaction.",
-      "thumb": "./images/plant_sq.jpg",
+      "thumb": "./images/hhi.jpeg",
       "details": {
         "fullDesc": "blablablablafull desc...",
         "outcomes": [
@@ -156,7 +156,7 @@
       "title": "Human-Self Interaction through Physical Experience",
       "layoutType": "academic",
       "shortIntro": "Exploring how human can interact with themselves with the help of physical intelligent companions.",
-      "thumb": "./images/plant_sq.jpg",
+      "thumb": "./images/bg2.JPG",
       "details": {
         "fullDesc": "blablablablafull desc...",
         "outcomes": [
