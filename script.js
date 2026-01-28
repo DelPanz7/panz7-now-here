@@ -19,7 +19,7 @@ const CONFIG = {
 
 // --- Data ---
 const hierarchy = {
-    id: 'root', type: 'root', name: 'Ziqi Pan', unit: 'I care about people.',
+    id: 'root', type: 'root', name: 'Ziqi Pan', unit: 'I care about people. I tell my fortune.',
     lat: CONFIG.rootLat, lon: 0,
     children: [
         {
@@ -880,18 +880,18 @@ function animate(time) {
 }
 
 window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    camera.aspect = w / h;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    composer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(w, h);
+    composer.setSize(w, h);
     
-    updateBgSize();
-
-    // 更新线条分辨率（你原有的代码）
+    // 更新所有线条的分辨率
     for (const key in nodesMap) {
         const node = nodesMap[key];
         if (node.lineMesh && node.lineMesh.material.resolution) {
-            node.lineMesh.material.resolution.set(window.innerWidth, window.innerHeight);
+            node.lineMesh.material.resolution.set(w, h);
         }
     }
 });
