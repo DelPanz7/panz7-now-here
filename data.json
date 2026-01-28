@@ -1,109 +1,174 @@
 {
   "l2-1": [
     {
-      "id": "project-01",
-      "title": "Smart Plants",
+      "id": "affordance",
+      "title": "Affordance-based Interaction with Everyday Objects",
       "layoutType": "academic",
-      "shortIntro": "Exploring biosignals interaction.",
+      "shortIntro": "Exploring new interaction opportunities with everyday objects through understanding and leveraging their affordances.",
       "thumb": "./images/plant_sq.jpg",
       "details": {
         "fullDesc": "blablablablafull desc...",
         "outcomes": [
-          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
-        ]
-      }
-    },
-    {
-      "id": "project-01",
-      "title": "Smart Plants",
-      "layoutType": "academic",
-      "shortIntro": "Exploring biosignals interaction.",
-      "thumb": "./images/plant_sq.jpg",
-      "details": {
-        "fullDesc": "blablablablafull desc...",
-        "outcomes": [
-          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
+          {
+            "source": "CHI 2025",
+            "title": "ACKnowledge: A Computational Framework for Human Compatible Affordance-based Interaction Planning in Real-world Contexts",
+            "authors": "Ziqi Pan, Xiucheng Zhang, Zisu Li, Zhenhui Peng, Mingming Fan, Xiaojuan Ma",
+            "link": "https://dl.acm.org/doi/abs/10.1145/3706598.3713791",
+            "icon": "🛋",
+            "status": "Published | Full-paper",
+            "intro": "TL;DR: Trying to build the brain of Ironman's JARVIS."
+          },
+          {
+            "source": "CHI 2023",
+            "title": "Squeez’in: Private authentication on smartphones based on squeezing gestures",
+            "authors": "Xin Yi, Shuning Zhang, Ziqi Pan, Louisa Shi, Fengyan Han, Yan Kong, Hewu Li, Yuanchun Shi",
+            "link": "https://dl.acm.org/doi/abs/10.1145/3544548.3581419",
+            "icon": "🤏📱🔓",
+            "status": "Published | Full-paper",
+            "intro": "TL;DR: Unlock your phone by squeezing it as you like."
+          }
         ]
       }
     }
   ],
   "l2-2": [
     {
-      "id": "project-01",
-      "title": "Smart Plants",
+      "id": "social computing",
+      "title": "Human Collaborations in Online communities",
       "layoutType": "academic",
-      "shortIntro": "Exploring biosignals interaction.",
+      "shortIntro": "Exploring how humans interact and collaborate via AI/technology-aided communication in online communities.",
       "thumb": "./images/plant_sq.jpg",
       "details": {
         "fullDesc": "blablablablafull desc...",
         "outcomes": [
-          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
+          {
+            "source": "CSCW 2025",
+            "title": "From Platform Migration to Cultural Integration: the Ingress and Diffusion of #wlw from TikTok to RedNote in Queer Women Communities",
+            "authors": "Ziqi Pan, Runhua Zhang, Jiehui Luo, Yuanhao Zhang, Yue Deng, Xiaojuan Ma",
+            "link": "https://dl.acm.org/doi/abs/10.1145/3715070.3749230",
+            "icon": "👭@📕",
+            "status": "Published | Poster",
+            "intro": "TL;DR: How would a foreign hashtag find its home in Chinese queer women community?"
+          },
+          {
+            "source": "CHI 2025",
+            "title": "'I Love the Internet Again': Exploring the Interaction Inception of 'TikTok Refugees' Flocking into RedNote",
+            "authors": "Kangyu Yuan, Li Zhang, Hanfang Lyu, Ziqi Pan, Yuanhao Zhang, Junze Li, Bingcan Guo, Jiaxiong Hu, Qingyu Guo, Xiaojuan Ma",
+            "link": "https://dl.acm.org/doi/abs/10.1145/3706599.3719738",
+            "icon": "📵=>📕",
+            "status": "Published | Late Breaking Work",
+            "intro": "TL;DR: What actually happened for TikTok Refugees."
+          },
+          {
+            "source": "CHI 2026",
+            "title": "When LLMs Enter Everyday Feminism on Chinese Social Media: Opportunities and Risks for Women’s Empowerment",
+            "authors": "Runhua Zhang, Ziqi Pan, Qiaoyi Chen, Kangyu Yuan, Yulin Tian, Huamin Qu, Xiaojuan Ma",
+            "link": "",
+            "icon": "👧=>👸",
+            "status": "Accepted | Full-paper",
+            "intro": "TL;DR: How LLM affect Chinese women's navigation to empowerment in online communities."
+          },
+          {
+            "source": "CHI 2026",
+            "title": "AI Clone Companions and “Dream Girl” Fans: How Idol-Based Agents Reshape Parasocial Relationships Across Real and Virtual Domains",
+            "authors": "Kangyu Yuan, Tak Kwan Wang, Jiachen Du, Yuanhao Zhang, Ziqi Pan, Xiaojuan Ma",
+            "link": "",
+            "icon": "AI💭💓",
+            "status": "Submitted | Poster",
+            "intro": "TL;DR: Are AI clone idols 'delulu' or 'solulu'?"
+          },
+          {
+            "source": "CHI 2026",
+            "title": "'Without AI, I Would Never Share This Online': Unpacking How LLMs Catalyze Women's Sharing of Gendered Experiences on Social Media",
+            "authors": "Runhua Zhang, Ziqi Pan, Huiran Yi, Huamin Qu, Xiaojuan Ma",
+            "link": "https://dl.acm.org/doi/abs/10.1145/3706598.3713791",
+            "icon": "👸withAI",
+            "status": "Submitted | Poster",
+            "intro": "TL;DR: How LLMs catalyze Chinese women's sharing of gendered experiences"
+          }
         ]
       }
     },
     {
-      "id": "project-01",
-      "title": "Smart Plants",
+      "id": "HRT",
+      "title": "Robots/Agents AND Human Collaborations",
       "layoutType": "academic",
-      "shortIntro": "Exploring biosignals interaction.",
+      "shortIntro": "Exploring how robots or intelligent agents can collaborate with humans in common human-human interaction scenarios.",
       "thumb": "./images/plant_sq.jpg",
       "details": {
         "fullDesc": "blablablablafull desc...",
         "outcomes": [
-          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
+          {
+            "source": "CHI 2026",
+            "title": "Friend, Foe, or Bot? Exploring Intergroup Dynamics in Hybrid Human-Bot Teams",
+            "authors": "Assem Zhunis, Ziqi Pan, Yuanhao Zhang, Xiaojuan Ma",
+            "link": "",
+            "icon": "🤖or🫂",
+            "status": "Accepted | Full-paper",
+            "intro": "TL;DR: How bots participation affect the perception and behavior of humans in teamwork."
+          },
+          {
+            "source": "Phd Qualifying Exam Survey",
+            "title": "Computational Approaches to Cognition Alignment in Human-Robot Teaming for Improved Collaborative Performance: A Survey",
+            "authors": "Ziqi Pan",
+            "link": "",
+            "icon": "👧=>👸",
+            "status": "Done | Revising",
+            "intro": "TL;DR: How to align the cognition of human and robot in Human-Robot teams."
+          }
         ]
       }
     },
     {
-      "id": "project-01",
-      "title": "Smart Plants",
-      "shortIntro": "Exploring biosignals interaction.",
+      "id": "HHI",
+      "title": "Robots FOR Human Collaborations",
+      "layoutType": "academic",
+      "shortIntro": "Exploring how robots or intelligent agents can facilitate and enhance human-human interaction.",
       "thumb": "./images/plant_sq.jpg",
       "details": {
         "fullDesc": "blablablablafull desc...",
         "outcomes": [
-          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
+          {
+            "source": "CHI 2026",
+            "title": "Repurposing Phones to Foster Collaboration: Designing Animated Phones as Facilitators in In‑Person Group Discussions",
+            "authors": "Ziqi Pan, Ziqi Liu, Jinhan Zhang, Zeyu Huang, Xiaojuan Ma",
+            "link": "",
+            "icon": "📝📱💨",
+            "status": "Submitted | Poster",
+            "intro": "TL;DR: Designing how phones should move actively as a group work facilitator"
+          },
+          {
+            "source": "Not yet Decided",
+            "title": "Moving Phones, Active Peers: Exploring the Effect of Animated Phones as Facilitators in In-Person Group Discussion",
+            "authors": "Ziqi Pan, Ziqi Liu, Jinhan Zhang, Zeyu Huang, Xiaojuan Ma",
+            "link": "",
+            "icon": "📱💨👥",
+            "status": "Ongoing | Full-paper",
+            "intro": "TL;DR: What if your phone can actively move to facilitate you to collaborate with your group mates?"
+          }
         ]
       }
     }
   ],
-  "l2-3":[
+  "l2-3": [
     {
-      "id": "project-01",
-      "title": "Smart Plants",
+      "id": "HSI",
+      "title": "Human-Self Interaction through Physical Experience",
       "layoutType": "academic",
-      "shortIntro": "Exploring biosignals interaction.",
+      "shortIntro": "Exploring how human can interact with themselves with the help of physical intelligent companions.",
       "thumb": "./images/plant_sq.jpg",
       "details": {
         "fullDesc": "blablablablafull desc...",
         "outcomes": [
-          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
-        ]
-      }
-    },
-    {
-      "id": "project-01",
-      "title": "Smart Plants",
-      "layoutType": "academic",
-      "shortIntro": "Exploring biosignals interaction.",
-      "thumb": "./images/plant_sq.jpg",
-      "details": {
-        "fullDesc": "blablablablafull desc...",
-        "outcomes": [
-          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
-        ]
-      }
-    },
-    {
-      "id": "project-01",
-      "title": "Smart Plants",
-      "layoutType": "academic",
-      "shortIntro": "Exploring biosignals interaction.",
-      "thumb": "./images/plant_sq.jpg",
-      "details": {
-        "fullDesc": "blablablablafull desc...",
-        "outcomes": [
-          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
+          {
+            "source": "Not yet Decided",
+            "title": "Not yet decided: helper for human-self interaction for stress management",
+            "authors": "Ziqi Pan, xxx (Callling for Collaboration), Xiaojuan Ma",
+            "link": "",
+            "icon": "😵",
+            "status": "Ongoing | Full-paper",
+            "intro": "TL;DR: The best is yet to come ???"
+          }
         ]
       }
     }
@@ -112,13 +177,16 @@
     {
       "id": "p2",
       "layoutType": "leisure",
-      "title": "Midnight Ballet",
-      "shortIntro": "A performance under the moon.",
+      "title": "Test",
+      "shortIntro": "test",
       "thumb": "./images/dance.jpg",
       "details": {
         "story": "street dance...",
-        "gallery": ["./img1.jpg", "./img2.jpg"],
-        "location": "Shanghai Art Center",
+        "gallery": [
+          "./bg1.jpg",
+          "./bg2.jpg"
+        ],
+        "location": "test",
         "date": "2024.10"
       }
     }

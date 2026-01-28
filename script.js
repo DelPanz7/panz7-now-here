@@ -42,7 +42,7 @@ const hierarchy = {
     lat: CONFIG.rootLat, lon: 0,
     children: [
         {
-            id: 'l1-1', label: 'Me', type: 'level-1', lat: 20, lon: -60, children: []
+            id: 'l1-1', label: 'Me\nNow and Then', type: 'level-1', lat: 20, lon: -60, children: []
         },
         {
             id: 'l1-2', label: 'Me as\nHCI Researcher', type: 'level-1', lat: 0, lon: 0,
@@ -783,7 +783,7 @@ function renderAcademicLayout(modal, card) {
                     ${card.details.outcomes.map(o => `
                         <div class="outcome-item" onclick="window.open('${o.link}', '_blank')">
                             <div class="outcome-header">
-                                <span class="outcome-icon">${o.icon}</span>
+                                <span class="outcome-icon" style="color: #ffffff">${o.icon}</span>
                                 <span class="outcome-source">${o.source}</span>
                                 <span class="outcome-status">${o.status}</span>
                             </div>

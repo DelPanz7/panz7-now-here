@@ -120,6 +120,7 @@ body, html {
     padding: 8px 12px; border-radius: 6px;
     backdrop-filter: blur(4px);
     border: 1px solid var(--accent-glow);
+    text-align: center;
 }
 
 .node-l2 { width: 120px; text-align: center; }
@@ -300,6 +301,9 @@ body, html {
     top: 50%; left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
     width: 80%; max-width: 900px;
+    max-height: 85vh; /* 最高占屏幕的 85% */
+    overflow-y: auto; /* 纵向内容多时自动出现滚动条 */
+    overflow-x: hidden;
     background: rgba(10, 10, 10, 0.95);
     border: 2px solid #f6f6f6;
     padding: 40px;
@@ -307,6 +311,7 @@ body, html {
     opacity: 0; pointer-events: none;
     transition: all 0.4s;
     backdrop-filter: blur(20px);
+    box-sizing: border-box; /* 确保 padding 不挤爆宽度 */
 }
 #detail-modal.active { opacity: 1; pointer-events: auto; transform: translate(-50%, -50%) scale(1); }
 
@@ -547,4 +552,45 @@ body, html {
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* 自定义滚动条样式 (适用于 Chrome, Safari, Edge) */
+#detail-modal::-webkit-scrollbar,
+#overlay-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#detail-modal::-webkit-scrollbar-track,
+#overlay-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#detail-modal::-webkit-scrollbar-thumb,
+#overlay-container::-webkit-scrollbar-thumb {
+    background: #c5a059; /* 金色滑块 */
+    border-radius: 10px;
+}
+
+#detail-modal::-webkit-scrollbar-thumb:hover,
+#overlay-container::-webkit-scrollbar-thumb:hover {
+    background: #bf5fff; /* 悬停变紫色 */
+}
+
+.modal-content-wrapper {
+    width: 100%;
+    position: relative;
+    /* 不要在这里设固定高度，让内容撑开 */
+}
+
+/* 调整关闭按钮位置，让它固定在右上角，不随内容滚动 */
+.close-modal {
+    position: sticky; /* 使用 sticky 保证向下滚动时按钮一直可见 */
+    top: -20px;
+    left: 100%;
+    background: none;
+    border: none;
+    color: #c5a059;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 101;
 }
