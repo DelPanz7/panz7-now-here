@@ -18,6 +18,25 @@ const CONFIG = {
 };
 
 // --- Data ---
+// 在 script.js 顶部声明一个全局变量存储数据
+let projectData = {};
+
+let aboutData = {};
+
+async function loadData() {
+    try {
+        const [projectRes, aboutRes] = await Promise.all([
+            fetch('./data.json'),
+            fetch('./about.json')
+        ]);
+        projectData = await projectRes.json();
+        aboutData = await aboutRes.json();
+    } catch (e) {
+        console.error("Data loading failed", e);
+    }
+}
+loadData();
+
 const hierarchy = {
     id: 'root', type: 'root', name: 'Ziqi Pan', unit: 'I care about people. I tell my fortune.',
     lat: CONFIG.rootLat, lon: 0,
@@ -26,34 +45,25 @@ const hierarchy = {
             id: 'l1-1', label: 'Me', type: 'level-1', lat: 20, lon: -60, children: []
         },
         {
-            id: 'l1-2', label: 'Me as\nHCI Researcher', type: 'level-1', lat: 5, lon: 0,
+            id: 'l1-2', label: 'Me as\nHCI Researcher', type: 'level-1', lat: 0, lon: 0,
             children: [
                 {
                     id: 'l2-1', label: 'Human-Environment', type: 'level-2', lat: -10, lon: -25,
-                    cards: [
-                        { name: 'Smart Plants', desc: 'Biosignals interaction.', thumb: 'https://via.placeholder.com/400x200', outcomes: [] }
-                    ]
                 },
                 {
                     id: 'l2-2', label: 'Human-Human', type: 'level-2', lat: -20, lon: 0,
-                    cards: [
-                        { name: 'Online Communities', desc: 'Digital migration.', thumb: 'https://via.placeholder.com/400x200', outcomes: [] }
-                    ]
                 },
                 {
                     id: 'l2-3', label: 'Human-Self', type: 'level-2', lat: -10, lon: 25,
-                    cards: [
-                        { name: 'Mindful Tech', desc: 'Self-reflection.', thumb: 'https://via.placeholder.com/400x200', outcomes: [] }
-                    ]
                 }
             ]
         },
         {
             id: 'l1-3', label: 'Me as\nArtist', type: 'level-1', lat: 20, lon: 60,
             children: [
-                { id: 'l2-4', label: 'Dance', type: 'level-2', lat: 10, lon: 80, cards: [] },
-                { id: 'l2-5', label: 'Music', type: 'level-2', lat: 30, lon: 80, cards: [] },
-                { id: 'l2-6', label: 'Photo', type: 'level-2', lat: 10, lon: 40, cards: [] }
+                { id: 'l2-4', label: 'Dance', type: 'level-2', lat: 10, lon: 80 },
+                { id: 'l2-5', label: 'Music', type: 'level-2', lat: 30, lon: 80 },
+                { id: 'l2-6', label: 'Photo', type: 'level-2', lat: 10, lon: 40 }
             ]
         }
     ]
@@ -657,7 +667,11 @@ function checkResumeRotation() {
 
 function toggleLevel1(nodeId) {
     const node = nodesMap[nodeId];
-    
+    if (nodeId === 'l1-1') {
+        showAboutMe();
+        return; // 直接返回，不执行展开子节点的逻辑
+    }
+
     // 标记交互开始，停止自转
     isInteractionActive = true;
     controls.autoRotate = false;
@@ -690,51 +704,35 @@ function toggleLevel1(nodeId) {
 }
 
 function openOverlay(nodeId) {
-    if (currentOpenNodeId === nodeId) {
-        closeOverlay();
-        return;
-    }
-    
-    isInteractionActive = true;
-    controls.autoRotate = false;
-
     currentOpenNodeId = nodeId;
     const node = nodesMap[nodeId];
     
-    focusNode(nodeId, 1500); // Focus without passing stopRotate param needed anymore
-
+    focusNode(nodeId, 1500, true);
     container.classList.add('blurred');
     uiLayer.classList.add('hidden');
+
     overlayTitle.textContent = node.data.label;
     overlayGrid.innerHTML = '';
-    if (node.data.cards && node.data.cards.length > 0) {
-        node.data.cards.forEach(card => {
-            let outcomesHtml = '';
-            if (card.outcomes) {
-                outcomesHtml = card.outcomes.map(o => `
-                    <div class="outcome-item" onclick="window.open('${o.link}', '_blank')">
-                        <div class="outcome-icon">${o.icon}</div>
-                        <div class="outcome-info">
-                            <span class="outcome-source">${o.source}</span>
-                            <span class="outcome-title">${o.title}</span>
-                        </div>
-                    </div>
-                `).join('');
-            }
+
+    // 从全局 projectData 中根据 L2 的 ID 获取卡片列表
+    const cards = projectData[nodeId] || [];
+
+    if (cards.length > 0) {
+        cards.forEach(card => {
             const cardEl = document.createElement('div');
             cardEl.className = 'overlay-card';
             cardEl.innerHTML = `
-                <img src="${card.thumb}" class="card-thumb">
-                <div class="card-content">
-                    <div class="card-title">${card.name}</div>
-                    <div class="card-desc">${card.desc}</div>
-                    <div class="outcome-list">${outcomesHtml}</div>
-                </div>
+                <img src="${card.thumb}" class="tarot-thumb">
+                <div class="tarot-title">${card.title}</div>
+                <div class="tarot-short-desc">${card.shortIntro}</div>
             `;
+            // 点击塔罗牌展示详情
+            cardEl.onclick = (e) => {
+                e.stopPropagation();
+                showDetailView(card);
+            };
             overlayGrid.appendChild(cardEl);
         });
-    } else {
-        overlayGrid.innerHTML = '<div style="color:#aaa; text-align:center; grid-column:1/-1;">No projects here yet.</div>';
     }
     overlayContainer.classList.add('active');
 }
@@ -749,6 +747,153 @@ function closeOverlay() {
 }
 
 closeOverlayBtn.onclick = closeOverlay;
+
+function showDetailView(card) {
+    const modal = document.getElementById('detail-modal') || createDetailModal();
+    
+    modal.className = 'active'; 
+    modal.classList.add(`layout-${card.layoutType}`);
+
+    if (card.layoutType === 'academic') {
+        renderAcademicLayout(modal, card);
+    } else {
+        renderLeisureLayout(modal, card);
+    }
+}
+
+function renderAcademicLayout(modal, card) {
+    // 渲染详情
+    modal.innerHTML = `
+        <div class="modal-content-wrapper">
+            <button class="close-modal" onclick="this.parentElement.parentElement.classList.remove('active')">×</button>
+            
+            <header style="margin-bottom: 30px;">
+                <h2 style="color:#c5a059; font-size: 2rem; margin-bottom: 10px;">${card.title}</h2>
+                <div style="width: 50px; height: 2px; background: #c5a059;"></div>
+            </header>
+
+            <section style="margin-bottom: 40px;">
+                <h4 style="color:#888; text-transform: uppercase; font-size:0.7rem; letter-spacing:2px;">Description</h4>
+                <p style="color:#ccc; line-height:1.8; font-size:0.95rem;">${card.details.fullDesc}</p>
+            </section>
+
+            <section>
+                <h4 style="color:#888; text-transform: uppercase; font-size:0.7rem; letter-spacing:2px; margin-bottom:15px;">Outcomes</h4>
+                <div class="outcome-list">
+                    ${card.details.outcomes.map(o => `
+                        <div class="outcome-item" onclick="window.open('${o.link}', '_blank')">
+                            <div class="outcome-header">
+                                <span class="outcome-icon">${o.icon}</span>
+                                <span class="outcome-source">${o.source}</span>
+                                <span class="outcome-status">${o.status}</span>
+                            </div>
+                            <div class="outcome-title">${o.title}</div>
+                            <div class="outcome-authors">${o.authors}</div>
+                            <div class="outcome-intro">${o.intro}</div>
+                            <div style="text-align: right; color: #c5a059; font-size: 0.8rem;">View Project ↗</div>
+                        </div>
+                    `).join('')}
+                </div>
+            </section>
+        </div>
+    `;
+    
+    modal.classList.add('active');
+}
+
+function renderLeisureLayout(modal, card) {
+    modal.innerHTML = `
+        <div class="modal-content-wrapper">
+            <button class="close-modal" onclick="this.parentElement.parentElement.classList.remove('active')">×</button>
+            
+            <div class="leisure-hero" style="background-image: url(${card.thumb})">
+                <div class="leisure-header">
+                    <h1>${card.title}</h1>
+                    <span class="leisure-meta">${card.details.date} @ ${card.details.location}</span>
+                </div>
+            </div>
+
+            <div class="leisure-body">
+                <p class="leisure-story">${card.details.story}</p>
+                
+                <div class="leisure-gallery">
+                    ${card.details.gallery ? card.details.gallery.map(img => `
+                        <img src="${img}" class="gallery-img">
+                    `).join('') : ''}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function createDetailModal() {
+    const m = document.createElement('div');
+    m.id = 'detail-modal';
+    document.body.appendChild(m);
+    return m;
+}
+
+function showAboutMe() {
+    const modal = document.getElementById('detail-modal') || createDetailModal();
+    
+    // 1. 设置交互状态，停止自转
+    isInteractionActive = true; 
+    controls.autoRotate = false;
+
+    // 2. 背景模糊
+    container.classList.add('blurred');
+    uiLayer.classList.add('hidden');
+
+    modal.innerHTML = `
+        <div class="modal-content-wrapper">
+            <button class="close-modal" onclick="closeAllModals()">×</button>
+            
+            <div class="about-modal-content">
+                <div class="about-left">
+                    <img src="${aboutData.portrait}" class="about-portrait">
+                    <a href="${aboutData.cvLink}" class="cv-download-btn" download>Download CV</a>
+                </div>
+                
+                <div class="about-right">
+                    <h1 style="font-family:'Cinzel',serif; color:#c0c0c0; margin-bottom:5px;">${aboutData.name}</h1>
+                    <p style="color:#888; font-size:0.9rem; margin-bottom:25px;">${aboutData.tagline}</p>
+                    
+                    <div class="about-bio">${aboutData.bio}</div>
+                    
+                    <div class="skills-tags">
+                        ${aboutData.skills.map(s => `<span class="skill-tag">${s}</span>`).join('')}
+                    </div>
+                    
+                    <div class="about-socials">
+                        ${aboutData.socials.map(s => `
+                            <a href="${s.url}" class="social-link" title="${s.platform}" target="_blank">${s.icon}</a>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    modal.className = 'active layout-about'; // 使用专属类名
+    document.getElementById('close-about-btn').onclick = () => {
+        closeAboutMe();
+    };
+}
+
+// 定义专门关闭 AboutMe 的函数
+function closeAboutMe() {
+    const modal = document.getElementById('detail-modal');
+    modal.classList.remove('active');
+    container.classList.remove('blurred');
+    uiLayer.classList.remove('hidden');
+
+    // 恢复自转状态检查
+    isInteractionActive = false;
+    checkResumeRotation(); 
+}
+
+// 为了防止其他地方（如 HTML 模板）仍在使用，可以把关闭函数挂到全局
+window.closeAllModals = closeAboutMe;
 
 // 【关键修改】Camera Focus Logic
 // 计算节点当前的世界坐标，并把相机移到它的正前方

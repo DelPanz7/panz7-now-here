@@ -1,0 +1,126 @@
+{
+  "l2-1": [
+    {
+      "id": "project-01",
+      "title": "Smart Plants",
+      "layoutType": "academic",
+      "shortIntro": "Exploring biosignals interaction.",
+      "thumb": "./images/plant_sq.jpg",
+      "details": {
+        "fullDesc": "blablablablafull desc...",
+        "outcomes": [
+          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
+        ]
+      }
+    },
+    {
+      "id": "project-01",
+      "title": "Smart Plants",
+      "layoutType": "academic",
+      "shortIntro": "Exploring biosignals interaction.",
+      "thumb": "./images/plant_sq.jpg",
+      "details": {
+        "fullDesc": "blablablablafull desc...",
+        "outcomes": [
+          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
+        ]
+      }
+    }
+  ],
+  "l2-2": [
+    {
+      "id": "project-01",
+      "title": "Smart Plants",
+      "layoutType": "academic",
+      "shortIntro": "Exploring biosignals interaction.",
+      "thumb": "./images/plant_sq.jpg",
+      "details": {
+        "fullDesc": "blablablablafull desc...",
+        "outcomes": [
+          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
+        ]
+      }
+    },
+    {
+      "id": "project-01",
+      "title": "Smart Plants",
+      "layoutType": "academic",
+      "shortIntro": "Exploring biosignals interaction.",
+      "thumb": "./images/plant_sq.jpg",
+      "details": {
+        "fullDesc": "blablablablafull desc...",
+        "outcomes": [
+          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
+        ]
+      }
+    },
+    {
+      "id": "project-01",
+      "title": "Smart Plants",
+      "shortIntro": "Exploring biosignals interaction.",
+      "thumb": "./images/plant_sq.jpg",
+      "details": {
+        "fullDesc": "blablablablafull desc...",
+        "outcomes": [
+          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
+        ]
+      }
+    }
+  ],
+  "l2-3":[
+    {
+      "id": "project-01",
+      "title": "Smart Plants",
+      "layoutType": "academic",
+      "shortIntro": "Exploring biosignals interaction.",
+      "thumb": "./images/plant_sq.jpg",
+      "details": {
+        "fullDesc": "blablablablafull desc...",
+        "outcomes": [
+          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
+        ]
+      }
+    },
+    {
+      "id": "project-01",
+      "title": "Smart Plants",
+      "layoutType": "academic",
+      "shortIntro": "Exploring biosignals interaction.",
+      "thumb": "./images/plant_sq.jpg",
+      "details": {
+        "fullDesc": "blablablablafull desc...",
+        "outcomes": [
+          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
+        ]
+      }
+    },
+    {
+      "id": "project-01",
+      "title": "Smart Plants",
+      "layoutType": "academic",
+      "shortIntro": "Exploring biosignals interaction.",
+      "thumb": "./images/plant_sq.jpg",
+      "details": {
+        "fullDesc": "blablablablafull desc...",
+        "outcomes": [
+          { "source": "CHI 2024", "title": "Paper Name", "link": "https://...", "icon": "📄" }
+        ]
+      }
+    }
+  ],
+  "l2-4": [
+    {
+      "id": "p2",
+      "layoutType": "leisure",
+      "title": "Midnight Ballet",
+      "shortIntro": "A performance under the moon.",
+      "thumb": "./images/dance.jpg",
+      "details": {
+        "story": "street dance...",
+        "gallery": ["./img1.jpg", "./img2.jpg"],
+        "location": "Shanghai Art Center",
+        "date": "2024.10"
+      }
+    }
+  ]
+}

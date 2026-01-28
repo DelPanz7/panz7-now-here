@@ -1,0 +1,14 @@
+{
+  "name": "Ziqi Pan",
+  "portrait": "./profile_photo.jpg",
+  "tagline": "HCI Researcher | Artist | Dreamer",
+  "bio": "这里写你的长篇个人简介。你可以描述你的研究方向，你对艺术的热爱，以及你希望通过技术解决什么样的人文问题。这里支持换行和较长的文本。",
+  "cvLink": "./assets/Ziqi_Pan_CV.pdf",
+  "email": "ziqi.pan@example.com",
+  "socials": [
+    { "platform": "GitHub", "url": "https://github.com/yourname", "icon": "🐙" },
+    { "platform": "LinkedIn", "url": "https://linkedin.com/in/yourname", "icon": "💼" },
+    { "platform": "Instagram", "url": "https://instagram.com/yourname", "icon": "📸" }
+  ],
+  "skills": ["HCI Research", "Interaction Design", "Physical Computing", "Media Art"]
+}

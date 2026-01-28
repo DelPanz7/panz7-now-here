@@ -226,45 +226,89 @@ body, html {
 }
 
 /* Card Style (In Overlay) */
+/* 塔罗牌卡片基础样式 */
 .overlay-card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 12px;
-    overflow: hidden;
+    width: 280px; /* 固定宽度 */
+    aspect-ratio: 2 / 3.5; /* 经典的扑克牌/塔罗牌比例 */
+    background: #1a1a1a;
+    border: 1px solid #c0c0c0; /* 暗金色边框 */
+    position: relative;
+    padding: 15px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s, box-shadow 0.3s;
-    backdrop-filter: blur(15px);
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
 }
+
+/* 模拟图片中的金色装饰性内框 */
+.overlay-card::before {
+    content: '';
+    position: absolute;
+    top: 8px; left: 8px; right: 8px; bottom: 8px;
+    border: 1px solid #F6F6F6; /* 亮金色 */
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* 角部的L型装饰（模拟塔罗牌花纹） */
+.overlay-card::after {
+    content: '✦'; /* 顶部的星型符号 */
+    position: absolute;
+    top: 12px;
+    color: #F6F6F6;
+    font-size: 12px;
+}
+
 .overlay-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 243, 255, 0.2);
-    border-color: #fff;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 30px rgba(197, 160, 89, 0.3);
+    border-color: #F6F6F6;
 }
 
-.card-thumb {
+/* 1:1 的形容图片 */
+.tarot-thumb {
     width: 100%;
-    height: 180px; /* Taller in overlay */
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    border: 1px solid #c0c0c0;
+    filter: sepia(0.3) contrast(1.1); /* 增加一点复古感 */
 }
 
-.card-content {
-    padding: 20px;
-    flex-grow: 1;
+.tarot-title {
+    font-family: "Cinzel", "Georgia", serif; /* 建议引入古典字体 */
+    color: #f6f6f6;
+    font-size: 1.4rem;
+    margin: 20px 0 10px 0;
+    text-align: center;
+    letter-spacing: 2px;
 }
-.card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 10px;
+
+.tarot-short-desc {
+    color: #aaa;
+    font-size: 0.85rem;
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 10px;
 }
-.card-desc {
-    font-size: 0.9rem;
-    color: #ccc;
-    line-height: 1.5;
-    margin-bottom: 20px;
+
+/* 详情模态框样式（二次弹窗） */
+#detail-modal {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 80%; max-width: 900px;
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #f6f6f6;
+    padding: 40px;
+    z-index: 100;
+    opacity: 0; pointer-events: none;
+    transition: all 0.4s;
+    backdrop-filter: blur(20px);
 }
+#detail-modal.active { opacity: 1; pointer-events: auto; transform: translate(-50%, -50%) scale(1); }
 
 /* Outcomes in Card */
 .outcome-list {
@@ -273,23 +317,69 @@ body, html {
     gap: 10px;
     margin-top: auto; /* Push to bottom */
 }
+/* 成果项容器 */
 .outcome-item {
-    background: var(--outcome-bg);
-    padding: 10px;
-    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.outcome-item:hover {
+    background: rgba(197, 160, 89, 0.1);
+    border-color: #f6f6f6;
+    transform: translateX(5px);
+}
+
+/* 顶部：图标、来源、状态 */
+.outcome-header {
     display: flex;
     align-items: center;
     gap: 10px;
-    cursor: pointer;
-    transition: background 0.2s;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-.outcome-item:hover {
-    background: var(--outcome-hover);
+
+.outcome-source {
+    color: #f6f6f6;
+    font-weight: bold;
 }
-.outcome-icon { font-size: 1.2rem; }
-.outcome-info { display: flex; flex-direction: column; }
-.outcome-source { font-size: 0.7rem; color: var(--accent-color); font-weight: bold; text-transform: uppercase;}
-.outcome-title { font-size: 0.85rem; color: #fff; font-weight: 600; }
+
+.outcome-status {
+    color: #888;
+    border-left: 1px solid #444;
+    padding-left: 10px;
+}
+
+/* 中部：标题 */
+.outcome-title {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* 作者列表 */
+.outcome-authors {
+    color: #aaa;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* 简介内容 */
+.outcome-intro {
+    color: #888;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-top: 5px;
+}
 
 #loading {
     position: fixed; top: 50%; left: 50%;
@@ -298,4 +388,163 @@ body, html {
     font-family: monospace; font-size: 1.2rem; z-index: 100;
     pointer-events: none;
     text-shadow: 0 0 10px var(--accent-color);
+}
+
+/* --- 休闲布局通用样式 --- */
+.layout-leisure .modal-content-wrapper {
+    padding: 0; /* 满屏感 */
+    max-width: 900px;
+}
+
+/* 顶部大图 */
+.leisure-hero {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.leisure-header {
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    width: 100%;
+    padding: 40px;
+}
+
+.leisure-header h1 {
+    font-family: 'Cinzel', serif;
+    color: #fff;
+    margin: 0;
+    font-size: 3rem;
+}
+
+.leisure-meta {
+    color: #c5a059;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+/* 正文内容 */
+.leisure-body {
+    padding: 40px;
+}
+
+.leisure-story {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    line-height: 2;
+    color: #ddd;
+    margin-bottom: 40px;
+    column-count: 1; /* 可以尝试双栏布局 */
+}
+
+/* 瀑布流/网格图集 */
+.leisure-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-img {
+    width: 100%;
+    border-radius: 4px;
+    transition: transform 0.3s;
+    filter: brightness(0.8);
+}
+.gallery-img:hover {
+    transform: scale(1.02);
+    filter: brightness(1);
+}
+
+/* --- About Me 弹窗样式 --- */
+.about-modal-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-left {
+    flex: 1;
+    text-align: center;
+}
+
+.about-portrait {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 15px;
+    border: 2px solid #f6f6f6;
+    box-shadow: 0 0 30px rgba(197, 160, 89, 0.3);
+}
+
+.cv-download-btn {
+    margin-top: 25px;
+    display: inline-block;
+    padding: 12px 25px;
+    background: transparent;
+    border: 1px solid #f6f6f6;
+    color: #f6f6f6;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.cv-download-btn:hover {
+    background: #f6f6f6;
+    color: #000;
+    box-shadow: 0 0 20px rgba(197, 160, 89, 0.5);
+}
+
+.about-right {
+    flex: 2;
+}
+
+.about-bio {
+    color: #ddd;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.skill-tag {
+    padding: 5px 15px;
+    background: rgba(197, 160, 89, 0.1);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    border-radius: 20px;
+    color: #f6f6f6;
+    font-size: 0.8rem;
+}
+
+.about-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.social-link {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+    color: #f6f6f6;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .about-modal-content {
+        flex-direction: column;
+        align-items: center;
+    }
 }
