@@ -1,13 +1,26 @@
 {
-  "name": "Ziqi Pan",
+  "name": "Ziqi Pan 潘紫琪",
   "portrait": "./profile_photo.jpg",
-  "tagline": "HCI Researcher | Artist | Fortune Teller",
-  "bio": "I am Ziqi (prounounced as Z-Chee)",
+  "tagline": "HCI Researcher | Artist | Fortune Teller (ALL in Training)",
+  "bio": "I am Ziqi (pronounced as Zee-Chee?). 我是潘紫琪，潘紫琪的紫，潘紫琪的琪。<br><br>I am a PhD year 3 student in the Computer Science and Engineering department at The Hong Kong University of Science and Technology (HKUST), supervised by Prof. Xiaojuan Ma. Previously, I obtained my undergraduate degree of Computer Science and Technology from Tsinghua University.<br><br>As I write in my slogan, I care about people. Therefore, my research is driven by the question of <b style='color:#c5a059'><i>how additional technological support can empower the interactions people already have with the world as complementaries</i></b>, rather than replace them. So far, my work has examined <b style='color:#c5a059'><i>human–environment</i></b> and <b style='color:#c5a059'><i>human–human</i></b> interaction; next, I hope to deepen my focus on <b style='color:#c5a059'><i>human–self</i></b> interaction, particularly through embodied and physical interfaces such as robots and interactive objects.<br><br>Apart from research, I am also a huge fan of music, dance and kpop. I make acapella music and dance covers. FYI, my kpop bias is GOT7, DAY6, and Xdinary Heroes. I also learnt to tell fortune with tarot cards, you can catch up with me for a tarot reading session if you are interested!",
+  "rctupd": "**I'm looking for collaboration and visiting opportunities! I'm more than happy to connect if you are interested in my research or just want to say hi :)**",
   "cvLink": "./assets/Ziqi_Pan_CV.pdf",
   "email": "zpanar@connect.ust.hk",
   "socials": [
-    { "platform": "GitHub", "url": "https://github.com/DelPanz7", "icon": "🐙Github" },
-    { "platform": "Instagram", "url": "https://www.instagram.com/deliiiiia_pan?igsh=MTRxdGFrYXZoMGNkcg%3D%3D&utm_source=qr", "icon": "📸Instagram" }
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/DelPanz7",
+      "icon": "🐙Github"
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/deliiiiia_pan?igsh=MTRxdGFrYXZoMGNkcg%3D%3D&utm_source=qr",
+      "icon": "📸Instagram"
+    }
   ],
-  "skills": ["HCI Research", "Interaction Design", "Music Making"]
+  "skills": [
+    "HCI Research",
+    "Interaction Design",
+    "Music Making"
+  ]
 }

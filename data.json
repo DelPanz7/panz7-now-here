@@ -1,13 +1,84 @@
 {
   "l2-1": [
     {
-      "id": "affordance",
-      "title": "Affordance-based Interaction with Everyday Objects",
+      "id": "social computing-women",
+      "title": "All about that WOMEN",
       "layoutType": "academic",
-      "shortIntro": "Exploring new interaction opportunities with everyday objects through understanding and leveraging their affordances.",
+      "shortIntro": "Exploring how women interact and collaborate via AI/technology-aided communication in online communities.",
+      "thumb": "./images/women.jpeg",
+      "details": {
+        "fullDesc": "I am a woman. I care about women. However, women are not adequately cared by the world. Therefore, as a women, I become an observer of the world from a women's perspective, and try to make more women be seen and heard by the world. In this thread of project, I explore how technology can help women become visible and empowered, also how the solidarity in the women community can be cultivated and strengthened, especially in the context of Chinese social media and online communities.",
+        "outcomes": [
+          {
+            "source": "CSCW 2025",
+            "title": "From Platform Migration to Cultural Integration: the Ingress and Diffusion of #wlw from TikTok to RedNote in Queer Women Communities",
+            "authors": "Ziqi Pan, Runhua Zhang, Jiehui Luo, Yuanhao Zhang, Yue Deng, Xiaojuan Ma",
+            "link": "https://dl.acm.org/doi/abs/10.1145/3715070.3749230",
+            "icon": "👭@📕",
+            "status": "Published | Poster",
+            "intro": "TL;DR: How would a foreign hashtag find its home in Chinese queer women community?"
+          },
+          {
+            "source": "CHI 2026",
+            "title": "When LLMs Enter Everyday Feminism on Chinese Social Media: Opportunities and Risks for Women’s Empowerment",
+            "authors": "Runhua Zhang, Ziqi Pan, Qiaoyi Chen, Kangyu Yuan, Yulin Tian, Huamin Qu, Xiaojuan Ma",
+            "link": "",
+            "icon": "👧=>👸",
+            "status": "Accepted | Full-paper",
+            "intro": "TL;DR: How LLM affect Chinese women's navigation to empowerment in online communities."
+          },
+          {
+            "source": "CHI 2026",
+            "title": "'Without AI, I Would Never Share This Online': Unpacking How LLMs Catalyze Women's Sharing of Gendered Experiences on Social Media",
+            "authors": "Runhua Zhang, Ziqi Pan, Huiran Yi, Huamin Qu, Xiaojuan Ma",
+            "link": "https://dl.acm.org/doi/abs/10.1145/3706598.3713791",
+            "icon": "👸withAI",
+            "status": "Submitted | Poster",
+            "intro": "TL;DR: How LLMs catalyze Chinese women's sharing of gendered experiences"
+          }
+        ]
+      }
+    },
+    {
+      "id": "social computing-case",
+      "title": "Obeservation of the Interesting Netizens",
+      "layoutType": "academic",
+      "shortIntro": "Exploring how women interact and collaborate via AI/technology-aided communication in online communities.",
+      "thumb": "./images/soccomp.jpeg",
+      "details": {
+        "fullDesc": "The world-wide-web is an umbrella that covers all kinds of people, and the internet is a mirror that reflects the diversity of human beings. In this thread of project, I observe and explore the interesting netizens in the world-wide-web, especially the sub-communities like online immigrants induced by platform regulations, and the fans who found parasocial relationships much easier to build and enjoy in the current era of AI and technology. By understanding their interactions and needs, I hope to design better technological support for them to interact with the world and with each other in a more empowered way.",
+        "outcomes": [
+          {
+            "source": "CHI 2025",
+            "title": "'I Love the Internet Again': Exploring the Interaction Inception of 'TikTok Refugees' Flocking into RedNote",
+            "authors": "Kangyu Yuan, Li Zhang, Hanfang Lyu, Ziqi Pan, Yuanhao Zhang, Junze Li, Bingcan Guo, Jiaxiong Hu, Qingyu Guo, Xiaojuan Ma",
+            "link": "https://dl.acm.org/doi/abs/10.1145/3706599.3719738",
+            "icon": "📵=>📕",
+            "status": "Published | Late Breaking Work",
+            "intro": "TL;DR: What actually happened for TikTok Refugees."
+          },
+          {
+            "source": "CHI 2026",
+            "title": "AI Clone Companions and “Dream Girl” Fans: How Idol-Based Agents Reshape Parasocial Relationships Across Real and Virtual Domains",
+            "authors": "Kangyu Yuan, Tak Kwan Wang, Jiachen Du, Yuanhao Zhang, Ziqi Pan, Xiaojuan Ma",
+            "link": "",
+            "icon": "AI💭💓",
+            "status": "Submitted | Poster",
+            "intro": "TL;DR: Are AI clone idols 'delulu' or 'solulu'?"
+          }
+        ]
+      }
+    }
+  ],
+  "l2-2": [
+    {
+      "id": "affordance",
+      "title": "Human-Compatible Interactions in Real-World",
+      "layoutType": "academic",
+      "shortIntro": "Exploring modeling and designing interactions with realworld objects that are compatible with human knowledge and values based on affordances.",
       "thumb": "./images/aff.jpeg",
       "details": {
-        "fullDesc": "blablablablafull desc...",
+        "fullDesc": "Though virtual intelligence is booming, the physical world is still the main stage for human interactions. In this thread of project, I explore how to model and design interactions with objects in a way that compatible with human values and perceptions based on objects' affordances. By understanding how people perceive and interact with objects in the physical world, I hope to develop agents that could behave the same way as humans do and design new interactions approach with digital devices that are natural and empowering for people in their daily lives.",
         "outcomes": [
           {
             "source": "CHI 2025",
@@ -29,104 +100,15 @@
           }
         ]
       }
-    }
-  ],
-  "l2-2": [
-    {
-      "id": "social computing",
-      "title": "Human Collaborations in Online communities",
-      "layoutType": "academic",
-      "shortIntro": "Exploring how humans interact and collaborate via AI/technology-aided communication in online communities.",
-      "thumb": "./images/soccomp.jpeg",
-      "details": {
-        "fullDesc": "blablablablafull desc...",
-        "outcomes": [
-          {
-            "source": "CSCW 2025",
-            "title": "From Platform Migration to Cultural Integration: the Ingress and Diffusion of #wlw from TikTok to RedNote in Queer Women Communities",
-            "authors": "Ziqi Pan, Runhua Zhang, Jiehui Luo, Yuanhao Zhang, Yue Deng, Xiaojuan Ma",
-            "link": "https://dl.acm.org/doi/abs/10.1145/3715070.3749230",
-            "icon": "👭@📕",
-            "status": "Published | Poster",
-            "intro": "TL;DR: How would a foreign hashtag find its home in Chinese queer women community?"
-          },
-          {
-            "source": "CHI 2025",
-            "title": "'I Love the Internet Again': Exploring the Interaction Inception of 'TikTok Refugees' Flocking into RedNote",
-            "authors": "Kangyu Yuan, Li Zhang, Hanfang Lyu, Ziqi Pan, Yuanhao Zhang, Junze Li, Bingcan Guo, Jiaxiong Hu, Qingyu Guo, Xiaojuan Ma",
-            "link": "https://dl.acm.org/doi/abs/10.1145/3706599.3719738",
-            "icon": "📵=>📕",
-            "status": "Published | Late Breaking Work",
-            "intro": "TL;DR: What actually happened for TikTok Refugees."
-          },
-          {
-            "source": "CHI 2026",
-            "title": "When LLMs Enter Everyday Feminism on Chinese Social Media: Opportunities and Risks for Women’s Empowerment",
-            "authors": "Runhua Zhang, Ziqi Pan, Qiaoyi Chen, Kangyu Yuan, Yulin Tian, Huamin Qu, Xiaojuan Ma",
-            "link": "",
-            "icon": "👧=>👸",
-            "status": "Accepted | Full-paper",
-            "intro": "TL;DR: How LLM affect Chinese women's navigation to empowerment in online communities."
-          },
-          {
-            "source": "CHI 2026",
-            "title": "AI Clone Companions and “Dream Girl” Fans: How Idol-Based Agents Reshape Parasocial Relationships Across Real and Virtual Domains",
-            "authors": "Kangyu Yuan, Tak Kwan Wang, Jiachen Du, Yuanhao Zhang, Ziqi Pan, Xiaojuan Ma",
-            "link": "",
-            "icon": "AI💭💓",
-            "status": "Submitted | Poster",
-            "intro": "TL;DR: Are AI clone idols 'delulu' or 'solulu'?"
-          },
-          {
-            "source": "CHI 2026",
-            "title": "'Without AI, I Would Never Share This Online': Unpacking How LLMs Catalyze Women's Sharing of Gendered Experiences on Social Media",
-            "authors": "Runhua Zhang, Ziqi Pan, Huiran Yi, Huamin Qu, Xiaojuan Ma",
-            "link": "https://dl.acm.org/doi/abs/10.1145/3706598.3713791",
-            "icon": "👸withAI",
-            "status": "Submitted | Poster",
-            "intro": "TL;DR: How LLMs catalyze Chinese women's sharing of gendered experiences"
-          }
-        ]
-      }
-    },
-    {
-      "id": "HRT",
-      "title": "Robots/Agents AND Human Collaborations",
-      "layoutType": "academic",
-      "shortIntro": "Exploring how robots or intelligent agents can collaborate with humans in common human-human interaction scenarios.",
-      "thumb": "./images/hrt.jpeg",
-      "details": {
-        "fullDesc": "blablablablafull desc...",
-        "outcomes": [
-          {
-            "source": "CHI 2026",
-            "title": "Friend, Foe, or Bot? Exploring Intergroup Dynamics in Hybrid Human-Bot Teams",
-            "authors": "Assem Zhunis, Ziqi Pan, Yuanhao Zhang, Xiaojuan Ma",
-            "link": "",
-            "icon": "🤖or🫂",
-            "status": "Accepted | Full-paper",
-            "intro": "TL;DR: How bots participation affect the perception and behavior of humans in teamwork."
-          },
-          {
-            "source": "Phd Qualifying Exam Survey",
-            "title": "Computational Approaches to Cognition Alignment in Human-Robot Teaming for Improved Collaborative Performance: A Survey",
-            "authors": "Ziqi Pan",
-            "link": "",
-            "icon": "👧=>👸",
-            "status": "Done | Revising",
-            "intro": "TL;DR: How to align the cognition of human and robot in Human-Robot teams."
-          }
-        ]
-      }
     },
     {
       "id": "HHI",
-      "title": "Robots FOR Human Collaborations",
+      "title": "Facilitating Human-Human Interaction in Real-World",
       "layoutType": "academic",
       "shortIntro": "Exploring how robots or intelligent agents can facilitate and enhance human-human interaction.",
       "thumb": "./images/hhi.jpeg",
       "details": {
-        "fullDesc": "blablablablafull desc...",
+        "fullDesc": "Besides the interactions between human and objects, human-human interaction is also a fundamental part of human life in this physical world. In this thread of project, I explore how to design and develop robots or intelligent agents that can facilitate and enhance human-human interaction, especially in face-to-face scenarios. By understanding the dynamics of human-human interaction and the potential role of technology in it, I hope to integrate technology seamlessly into human social contexts and promote more effective and enjoyable interactions among people.",
         "outcomes": [
           {
             "source": "CHI 2026",
@@ -148,6 +130,36 @@
           }
         ]
       }
+    },
+    {
+      "id": "HRT",
+      "title": "Human-Robot Teaming",
+      "layoutType": "academic",
+      "shortIntro": "Exploring how robots or intelligent agents can collaborate with humans in common human-human interaction scenarios.",
+      "thumb": "./images/hrt.jpeg",
+      "details": {
+        "fullDesc": "Beyond assistant or facilitator, technology can also be a teammate that collaborates with humans in common human-human interaction scenarios. In this thread of project, I explore how robots or intelligent agents may collaborate with humans, especially in teamwork scenarios. Based on the understanding of human-human interaction, I hope to explore (1) what kind of role and function a robot or intelligent agent may uniquely play in a human-robot team and how such roles may influence human perception and behavior, and (2) how to align the way to make contributions in group work between the robot or intelligent agent and the human teammates, so that the robot or intelligent agent can be a more compatible and effective teammate for humans in their daily life and work.",
+        "outcomes": [
+          {
+            "source": "CHI 2026",
+            "title": "Friend, Foe, or Bot? Exploring Intergroup Dynamics in Hybrid Human-Bot Teams",
+            "authors": "Assem Zhunis, Ziqi Pan, Yuanhao Zhang, Xiaojuan Ma",
+            "link": "",
+            "icon": "🤖or🫂",
+            "status": "Accepted | Full-paper",
+            "intro": "TL;DR: How bots participation affect the perception and behavior of humans in teamwork."
+          },
+          {
+            "source": "Phd Qualifying Exam Survey",
+            "title": "Computational Approaches to Cognition Alignment in Human-Robot Teaming for Improved Collaborative Performance: A Survey",
+            "authors": "Ziqi Pan",
+            "link": "",
+            "icon": "👧=>👸",
+            "status": "Done | Revising",
+            "intro": "TL;DR: How to align the cognition of human and robot in Human-Robot teams."
+          }
+        ]
+      }
     }
   ],
   "l2-3": [
@@ -156,9 +168,9 @@
       "title": "Human-Self Interaction through Physical Experience",
       "layoutType": "academic",
       "shortIntro": "Exploring how human can interact with themselves with the help of physical intelligent companions.",
-      "thumb": "./images/bg2.JPG",
+      "thumb": "./images/bg2.jpeg",
       "details": {
-        "fullDesc": "blablablablafull desc...",
+        "fullDesc": "This is a direction currently in its early stage and I am still exploring the research questions and design space. I am driven to explore how technology can help humans interact with themselves because of myself. I have experienced depression and anxiety at the beginning of my PhD journey and I am still trying to cope with them in the best way. During my fight against those emotions, I found that the interactions with myself are crucial. However, I am not always in a good condition to interact with myself in a positive way. Therefore, I am interested in exploring how technology can help facilitate human-self interaction, especially through physical experience with embodied and physical interfaces such as robots and interactive objects.",
         "outcomes": [
           {
             "source": "Not yet Decided",
