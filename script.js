@@ -507,7 +507,7 @@ function renderLeisureLayout(modal, card) {
         <div class="modal-content-wrapper">
             <button class="close-modal" onclick="this.parentElement.parentElement.classList.remove('active')">×</button>
             <div class="leisure-hero" style="background-image: url(${card.thumb})"><div class="leisure-header"><h1>${card.title}</h1><span class="leisure-meta">${card.details.date} @ ${card.details.location}</span></div></div>
-            <div class="leisure-body"><p class="leisure-story">${card.details.story}</p><div class="leisure-gallery">${card.details.gallery ? card.details.gallery.map(img => `<img src="${img}" class="gallery-img">`).join('') : ''}</div></div>
+            <div class="leisure-body"><p class="leisure-story" style="font-size:0.9rem;">${card.details.story}</p><div class="leisure-gallery">${card.details.gallery ? card.details.gallery.map(img => `<img src="${img}" class="gallery-img">`).join('') : ''}</div></div>
         </div>`;
 }
 function createDetailModal() { 
