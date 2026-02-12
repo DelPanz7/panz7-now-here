@@ -26,15 +26,6 @@
             "icon": "👧=>👸",
             "status": "Accepted | Full-paper",
             "intro": "TL;DR: How LLM affect Chinese women's navigation to empowerment in online communities."
-          },
-          {
-            "source": "CHI 2026",
-            "title": "'Without AI, I Would Never Share This Online': Unpacking How LLMs Catalyze Women's Sharing of Gendered Experiences on Social Media",
-            "authors": "Runhua Zhang, Ziqi Pan, Huiran Yi, Huamin Qu, Xiaojuan Ma",
-            "link": "https://dl.acm.org/doi/abs/10.1145/3706598.3713791",
-            "icon": "👸withAI",
-            "status": "Submitted | Poster",
-            "intro": "TL;DR: How LLMs catalyze Chinese women's sharing of gendered experiences"
           }
         ]
       }
@@ -56,15 +47,6 @@
             "icon": "📵=>📕",
             "status": "Published | Late Breaking Work",
             "intro": "TL;DR: What actually happened for TikTok Refugees."
-          },
-          {
-            "source": "CHI 2026",
-            "title": "AI Clone Companions and “Dream Girl” Fans: How Idol-Based Agents Reshape Parasocial Relationships Across Real and Virtual Domains",
-            "authors": "Kangyu Yuan, Tak Kwan Wang, Jiachen Du, Yuanhao Zhang, Ziqi Pan, Xiaojuan Ma",
-            "link": "",
-            "icon": "AI💭💓",
-            "status": "Submitted | Poster",
-            "intro": "TL;DR: Are AI clone idols 'delulu' or 'solulu'?"
           }
         ]
       }
@@ -118,15 +100,6 @@
             "icon": "📝📱💨",
             "status": "Submitted | Poster",
             "intro": "TL;DR: Designing how phones should move actively as a group work facilitator"
-          },
-          {
-            "source": "Not yet Decided",
-            "title": "Moving Phones, Active Peers: Exploring the Effect of Animated Phones as Facilitators in In-Person Group Discussion",
-            "authors": "Ziqi Pan, Ziqi Liu, Jinhan Zhang, Zeyu Huang, Xiaojuan Ma",
-            "link": "",
-            "icon": "📱💨👥",
-            "status": "Ongoing | Full-paper",
-            "intro": "TL;DR: What if your phone can actively move to facilitate you to collaborate with your group mates?"
           }
         ]
       }
