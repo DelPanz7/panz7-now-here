@@ -93,13 +93,13 @@
         "fullDesc": "Besides the interactions between human and objects, human-human interaction is also a fundamental part of human life in this physical world. In this thread of project, I explore how to design and develop robots or intelligent agents that can facilitate and enhance human-human interaction, especially in face-to-face scenarios. By understanding the dynamics of human-human interaction and the potential role of technology in it, I hope to integrate technology seamlessly into human social contexts and promote more effective and enjoyable interactions among people.",
         "outcomes": [
           {
-            "source": "CHI 2026",
-            "title": "Repurposing Phones to Foster Collaboration: Designing Animated Phones as Facilitators in In‑Person Group Discussions",
+            "source": "Not yet Decided",
+            "title": "Moving Phones, Active Peers: Exploring the Effect of Animated Phones as Facilitators in In-Person Group Discussion",
             "authors": "Ziqi Pan, Ziqi Liu, Jinhan Zhang, Zeyu Huang, Xiaojuan Ma",
             "link": "",
-            "icon": "📝📱💨",
-            "status": "Submitted | Poster",
-            "intro": "TL;DR: Designing how phones should move actively as a group work facilitator"
+            "icon": "📱💨👥",
+            "status": "Ongoing | Full-paper",
+            "intro": "TL;DR: What if your phone can actively move to facilitate you to collaborate with your group mates?"
           }
         ]
       }
